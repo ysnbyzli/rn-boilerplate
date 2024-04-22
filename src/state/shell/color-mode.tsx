@@ -42,12 +42,12 @@ export function Provider({ children }: React.PropsWithChildren<{}>) {
     []
   );
 
-  // React.useEffect(() => {
-  //   return persisted.onUpdate(() => {
-  //     setColorMode(persisted.get("colorMode"));
-  //     setDarkTheme(persisted.get("darkTheme"));
-  //   });
-  // }, []);
+  React.useEffect(() => {
+    return persisted.onUpdate(() => {
+      setColorMode(persisted.get("colorMode"));
+      setDarkTheme(persisted.get("darkTheme"));
+    });
+  }, []);
 
   return (
     <stateContext.Provider value={stateContextValue}>
