@@ -14,11 +14,14 @@ import {
   useLanguagePrefs,
   useLanguagePrefsApi,
 } from "#/state/preferences/languages";
+import { useModalControls } from "#/state/modals";
 
 const Home = () => {
   const theme = useColorModeTheme();
   const { setPrimaryLanguage } = useLanguagePrefsApi();
   const { primaryLanguage } = useLanguagePrefs();
+
+  const { openModal } = useModalControls();
 
   console.log({ primaryLanguage });
 
@@ -109,6 +112,19 @@ const Home = () => {
           setPrimaryLanguage(
             primaryLanguage === AppLanguage.tr ? AppLanguage.en : AppLanguage.tr
           );
+        }}
+      />
+      <Button
+        title={_(msg`Open Bottomsheet`)}
+        onPress={() => {
+          openModal({
+            message: "Hello",
+            name: "confirm",
+            title: "Hello",
+            onPressConfirm: () => {
+              console.log("Confirm");
+            },
+          });
         }}
       />
     </View>
