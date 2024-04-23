@@ -8,12 +8,14 @@ import {
 
 import { init as initPersistedState } from "#/state/persisted";
 import { Provider as ShellProvider } from "#/state/shell";
+import { Provider as LanguageProvider } from "#/state/preferences/languages";
 import { ThemeProvider as Alf } from "#/alf";
 import { ThemeProvider } from "lib/ThemeContext";
 
 import { useColorModeTheme } from "#/alf/util/userColorModeTheme";
 import Home from "#/view/screens/Home";
 import React from "react";
+import I18nProvider from "#/locale/i18nProvider";
 
 function InnerApp() {
   const theme = useColorModeTheme();
@@ -42,16 +44,11 @@ export default function App() {
   }
   return (
     <ShellProvider>
-      <InnerApp />
+      <LanguageProvider>
+        <I18nProvider>
+          <InnerApp />
+        </I18nProvider>
+      </LanguageProvider>
     </ShellProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

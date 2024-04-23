@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2024-04-22 21:33+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: tr\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/view/screens/Home.tsx:104
+msgid "Change Language"
+msgstr "Dili Değiştir"
+
+#: src/view/screens/Home.tsx:69
+msgid "Color Mode:"
+msgstr "Renk Modu:"
+
+#: src/view/screens/Home.tsx:88
+msgid "Dark Mode"
+msgstr "Koyu Mod"
+
+#: src/view/screens/Home.tsx:75
+msgid "Device Locales:"
+msgstr "Cihaz Dilleri"
+
+#: src/view/screens/Home.tsx:53
+#~ msgid "hello"
+#~ msgstr "merhaba"
+
+#: src/view/screens/Home.tsx:81
+msgid "Selected Locale:"
+msgstr "Seçili Dil:"
+
+#: src/view/screens/Home.tsx:94
+msgid "Soft Dark"
+msgstr "Yumuşak Koyu"
+
+#: src/view/screens/Home.tsx:63
+msgid "Theme:"
+msgstr "Tema"
